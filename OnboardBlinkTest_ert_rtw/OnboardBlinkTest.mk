@@ -2,7 +2,7 @@
 ## Makefile generated for component 'OnboardBlinkTest'. 
 ## 
 ## Makefile     : OnboardBlinkTest.mk
-## Generated on : Tue Jan 31 17:54:46 2023
+## Generated on : Wed Feb 01 17:47:18 2023
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/OnboardBlinkTest.elf
 ## Product type : executable
 ## 
@@ -18,16 +18,17 @@
 
 PRODUCT_NAME              = OnboardBlinkTest
 MAKEFILE                  = OnboardBlinkTest.mk
-MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2021b
-MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2021b/bin
+MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2022b
+MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2022b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = C:/Users/ahmot/OneDrive/Documents/github/Project1
+START_DIR                 = C:/Users/AIDANG~1/DOCUME~1/CURREN~1/SENIOR~1/Project1
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
 TGT_FCN_LIB               = None
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 0
 RELATIVE_PATH_TO_ANCHOR   = ..
+SLIB_PATH                 = C:/Users/AIDANG~1/DOCUME~1/MATLAB/R2022b/ARDUIN~1/ARDUIN~1/FASTER~1
 C_STANDARD_OPTS           = 
 CPP_STANDARD_OPTS         = 
 
@@ -37,7 +38,7 @@ CPP_STANDARD_OPTS         =
 
 # Toolchain Name:          Arduino AVR
 # Supported Version(s):    
-# ToolchainInfo Version:   2021b
+# ToolchainInfo Version:   2022b
 # Specification Revision:  1.0
 # 
 #-------------------------------------------
@@ -61,7 +62,6 @@ PRODUCT_BIN      = $(RELATIVE_PATH_TO_ANCHOR)/$(PRODUCT_NAME).eep
 ARDUINO_TOOLS    = $(ARDUINO_ROOT)/hardware/tools/avr/bin
 ELF2EEP_OPTIONS  = -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
 DOWNLOAD_ARGS    =  >tmp.trash 2>&1 -P$(ARDUINO_PORT) -V -q -q -q -q -F -C$(ARDUINO_ROOT)/hardware/tools/avr/etc/avrdude.conf -p$(ARDUINO_MCU) -c$(ARDUINO_PROTOCOL) -b$(ARDUINO_BAUD) -D -Uflash:w:
-SLIB_PATH        = C:/Users/ahmot/DOCUME~1/MATLAB/R2021b/ARDUIN~1/ARDUIN~1/FASTER~1
 
 TOOLCHAIN_SRCS = 
 TOOLCHAIN_INCS = 
@@ -199,7 +199,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2021b/toolbox/target/shared/svd/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2021b/toolbox/target/SUPPOR~1/ARDUIN~2/include -I$(START_DIR)/OnboardBlinkTest_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino -I$(ARDUINO_ROOT)/hardware/arduino/avr/variants/mega -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2021b/toolbox/target/SUPPOR~1/ARDUIN~1/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2021b/toolbox/target/SUPPOR~1/ARDUIN~1/SCHEDU~1/include -I$(ARDUINO_ROOT)/hardware/tools/avr/avr/include/avr -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2021b/toolbox/target/shared/EXTERN~1/include
+INCLUDES_BUILDINFO = -I$(START_DIR) -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2022b/toolbox/target/shared/svd/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2022b/toolbox/target/SUPPOR~1/ARDUIN~2/include -I$(START_DIR)/OnboardBlinkTest_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino -I$(ARDUINO_ROOT)/hardware/arduino/avr/variants/mega -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2022b/toolbox/target/SUPPOR~1/ARDUIN~1/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2022b/toolbox/target/SUPPOR~1/ARDUIN~1/SCHEDU~1/include -I$(ARDUINO_ROOT)/hardware/tools/avr/avr/include/avr
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -207,7 +207,7 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DMW_TIMERID=5 -DMW_PRESCALAR=1024 -DMW_TIMERCOUNT=49911 -DMW_SCHEDULERCOUNTER=1 -DARDUINO_NUM_SERIAL_PORTS=4 -D_RTT_BAUDRATE_SERIAL0_=9600 -D_RTT_BAUDRATE_SERIAL1_=9600 -D_RTT_BAUDRATE_SERIAL2_=9600 -D_RTT_BAUDRATE_SERIAL3_=9600 -D_RTT_ANALOG_REF_=0
+DEFINES_ = -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DMW_TIMERID=5 -DMW_PRESCALAR=1024 -DMW_TIMERCOUNT=62411 -DMW_SCHEDULERCOUNTER=1 -DARDUINO_NUM_SERIAL_PORTS=4 -D_RTT_BAUDRATE_SERIAL0_=9600 -D_RTT_BAUDRATE_SERIAL1_=9600 -D_RTT_BAUDRATE_SERIAL2_=9600 -D_RTT_BAUDRATE_SERIAL3_=9600 -D_RTT_CONFIG_SERIAL0_=SERIAL_8N1 -D_RTT_CONFIG_SERIAL1_=SERIAL_8N1 -D_RTT_CONFIG_SERIAL2_=SERIAL_8N1 -D_RTT_CONFIG_SERIAL3_=SERIAL_8N1 -D_RTT_ANALOG_REF_=0
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DONESTEPFCN=1 -DTERMFCN=1 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0
 DEFINES_CUSTOM = 
 DEFINES_OPTS = -DTID01EQ=0
@@ -220,7 +220,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/MW_AnalogInput.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/ArduinoPinHandleMap.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/MW_arduino_digitalio.cpp $(START_DIR)/OnboardBlinkTest_ert_rtw/OnboardBlinkTest.c $(START_DIR)/OnboardBlinkTest_ert_rtw/OnboardBlinkTest_data.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinotarget/registry/../src/MW_ArduinoHWInit.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/io_wrappers.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/src/arduinoAVRScheduler.cpp
+SRCS = C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/MW_AnalogInput.cpp C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/ArduinoPinHandleMap.cpp C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/MW_arduino_digitalio.cpp $(START_DIR)/OnboardBlinkTest_ert_rtw/OnboardBlinkTest.c $(START_DIR)/OnboardBlinkTest_ert_rtw/OnboardBlinkTest_data.c C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinotarget/registry/../src/MW_ArduinoHWInit.cpp C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/io_wrappers.cpp C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/src/arduinoAVRScheduler.cpp
 
 MAIN_SRC = $(START_DIR)/OnboardBlinkTest_ert_rtw/ert_main.c
 
@@ -381,7 +381,7 @@ execute : download
 
 $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 	echo "### Creating standalone executable "$(PRODUCT)" ..."
-	$(CPP_LD) $(CPP_LDFLAGS) -o $(PRODUCT) $(subst /,\,$(OBJS)) $(subst /,\,$(MAIN_OBJ)) $(subst /,\,$(LIBS)) $(subst /,\,$(SYSTEM_LIBS)) $(subst /,\,$(TOOLCHAIN_LIBS))
+	$(CPP_LD) $(CPP_LDFLAGS) -o $(PRODUCT) $(OBJS) $(MAIN_OBJ) $(LIBS) $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
 	echo "### Created: $(PRODUCT)"
 
 
@@ -394,151 +394,151 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 #---------------------
 
 %.o : %.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 %.S.o : %.s
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.S.o : %.S
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.o : %.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
 %.o : $(RELATIVE_PATH_TO_ANCHOR)/%.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(RELATIVE_PATH_TO_ANCHOR)/%.s
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(RELATIVE_PATH_TO_ANCHOR)/%.S
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.o : $(RELATIVE_PATH_TO_ANCHOR)/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
 %.o : $(START_DIR)/%.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(START_DIR)/%.s
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(START_DIR)/%.S
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.o : $(START_DIR)/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/%.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+%.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-%.S.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+%.S.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/%.s
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
-%.S.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+%.S.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/%.S
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
-%.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+%.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
 %.o : $(START_DIR)/OnboardBlinkTest_ert_rtw/%.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(START_DIR)/OnboardBlinkTest_ert_rtw/%.s
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(START_DIR)/OnboardBlinkTest_ert_rtw/%.S
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.o : $(START_DIR)/OnboardBlinkTest_ert_rtw/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
 %.o : $(MATLAB_ROOT)/rtw/c/src/%.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(MATLAB_ROOT)/rtw/c/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(MATLAB_ROOT)/rtw/c/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.o : $(MATLAB_ROOT)/rtw/c/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
 %.o : $(MATLAB_ROOT)/simulink/src/%.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(MATLAB_ROOT)/simulink/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.S.o : $(MATLAB_ROOT)/simulink/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" $(subst /,\,"$<")
+	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
 %.o : $(MATLAB_ROOT)/simulink/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-MW_AnalogInput.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/MW_AnalogInput.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+MW_AnalogInput.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/MW_AnalogInput.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-ArduinoPinHandleMap.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/ArduinoPinHandleMap.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+ArduinoPinHandleMap.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/ArduinoPinHandleMap.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-MW_arduino_digitalio.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/MW_arduino_digitalio.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+MW_arduino_digitalio.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/MW_arduino_digitalio.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
 OnboardBlinkTest.o : $(START_DIR)/OnboardBlinkTest_ert_rtw/OnboardBlinkTest.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 OnboardBlinkTest_data.o : $(START_DIR)/OnboardBlinkTest_ert_rtw/OnboardBlinkTest_data.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 ert_main.o : $(START_DIR)/OnboardBlinkTest_ert_rtw/ert_main.c
-	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-MW_ArduinoHWInit.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinotarget/registry/../src/MW_ArduinoHWInit.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+MW_ArduinoHWInit.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinotarget/registry/../src/MW_ArduinoHWInit.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-io_wrappers.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/io_wrappers.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+io_wrappers.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinobase/src/io_wrappers.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-arduinoAVRScheduler.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/src/arduinoAVRScheduler.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" $(subst /,\,"$<")
+arduinoAVRScheduler.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/src/arduinoAVRScheduler.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
 ###########################################################################
