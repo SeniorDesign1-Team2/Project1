@@ -7,9 +7,9 @@
  *
  * Code generation for model "OnboardBlinkTest".
  *
- * Model version              : 1.3
+ * Model version              : 1.5
  * Simulink Coder version : 9.6 (R2021b) 14-May-2021
- * C source code generated on : Tue Jan 31 18:34:02 2023
+ * C source code generated on : Wed Feb  1 18:27:15 2023
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -23,15 +23,15 @@
 
 /* Block parameters (default storage) */
 P_OnboardBlinkTest_T OnboardBlinkTest_P = {
-  /* Expression: 1
-   * Referenced by: '<Root>/Analog Input'
+  /* Mask Parameter: CompareToConstant_const
+   * Referenced by: '<S1>/Constant'
    */
-  1.0,
+  256U,
 
-  /* Expression: 1
-   * Referenced by: '<Root>/Analog Input1'
+  /* Expression: -1
+   * Referenced by: '<Root>/Analog Input2'
    */
-  1.0,
+  -1.0,
 
   /* Expression: 0
    * Referenced by: '<Root>/Constant1'
@@ -45,11 +45,6 @@ P_OnboardBlinkTest_T OnboardBlinkTest_P = {
 
   /* Expression: 0
    * Referenced by: '<Root>/Constant2'
-   */
-  0.0,
-
-  /* Expression: 0
-   * Referenced by: '<Root>/Constant3'
    */
   0.0,
 

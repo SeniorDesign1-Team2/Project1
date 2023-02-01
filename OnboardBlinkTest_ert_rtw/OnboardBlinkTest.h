@@ -7,9 +7,9 @@
  *
  * Code generation for model "OnboardBlinkTest".
  *
- * Model version              : 1.3
+ * Model version              : 1.5
  * Simulink Coder version : 9.6 (R2021b) 14-May-2021
- * C source code generated on : Tue Jan 31 18:34:02 2023
+ * C source code generated on : Wed Feb  1 18:27:15 2023
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -21,11 +21,12 @@
 #ifndef RTW_HEADER_OnboardBlinkTest_h_
 #define RTW_HEADER_OnboardBlinkTest_h_
 #include <math.h>
-#include <stddef.h>
 #include <string.h>
 #ifndef OnboardBlinkTest_COMMON_INCLUDES_
 #define OnboardBlinkTest_COMMON_INCLUDES_
 #include "rtwtypes.h"
+#include "rtw_extmode.h"
+#include "sysran_types.h"
 #include "rtw_continuous.h"
 #include "rtw_solver.h"
 #include "MW_AnalogIn.h"
@@ -39,6 +40,14 @@
 #include "MW_target_hardware_resources.h"
 
 /* Macros for accessing real-time model data structure */
+#ifndef rtmGetFinalTime
+#define rtmGetFinalTime(rtm)           ((rtm)->Timing.tFinal)
+#endif
+
+#ifndef rtmGetRTWExtModeInfo
+#define rtmGetRTWExtModeInfo(rtm)      ((rtm)->extModeInfo)
+#endif
+
 #ifndef rtmGetErrorStatus
 #define rtmGetErrorStatus(rtm)         ((rtm)->errorStatus)
 #endif
@@ -47,27 +56,62 @@
 #define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
 #endif
 
+#ifndef rtmGetStopRequested
+#define rtmGetStopRequested(rtm)       ((rtm)->Timing.stopRequestedFlag)
+#endif
+
+#ifndef rtmSetStopRequested
+#define rtmSetStopRequested(rtm, val)  ((rtm)->Timing.stopRequestedFlag = (val))
+#endif
+
+#ifndef rtmGetStopRequestedPtr
+#define rtmGetStopRequestedPtr(rtm)    (&((rtm)->Timing.stopRequestedFlag))
+#endif
+
+#ifndef rtmGetT
+#define rtmGetT(rtm)                   ((rtm)->Timing.taskTime0)
+#endif
+
+#ifndef rtmGetTFinal
+#define rtmGetTFinal(rtm)              ((rtm)->Timing.tFinal)
+#endif
+
+#ifndef rtmGetTPtr
+#define rtmGetTPtr(rtm)                (&(rtm)->Timing.taskTime0)
+#endif
+
+/* Block signals (default storage) */
+typedef struct {
+  uint16_T AnalogInput2;               /* '<Root>/Analog Input2' */
+} B_OnboardBlinkTest_T;
+
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  codertarget_arduinobase_inter_T obj; /* '<Root>/Analog Input1' */
-  codertarget_arduinobase_inter_T obj_n;/* '<Root>/Analog Input' */
-  codertarget_arduinobase_block_T obj_nv;/* '<Root>/Digital Output2' */
-  codertarget_arduinobase_block_T obj_i;/* '<Root>/Digital Output1' */
+  codertarget_arduinobase_inter_T obj; /* '<Root>/Analog Input2' */
+  codertarget_arduinobase_block_T obj_o;/* '<Root>/Digital Output3' */
+  codertarget_arduinobase_block_T obj_b;/* '<Root>/Digital Output2' */
   codertarget_arduinobase_block_T obj_g;/* '<Root>/Digital Output' */
-  boolean_T objisempty;                /* '<Root>/Digital Output2' */
-  boolean_T objisempty_g;              /* '<Root>/Digital Output1' */
+  struct {
+    void *LoggedData;
+  } Scope_PWORK;                       /* '<Root>/Scope' */
+
+  struct {
+    void *AQHandles;
+  } TAQSigLogging_InsertedFor_Analo;   /* synthesized block */
+
+  boolean_T objisempty;                /* '<Root>/Digital Output3' */
+  boolean_T objisempty_c;              /* '<Root>/Digital Output2' */
   boolean_T objisempty_n;              /* '<Root>/Digital Output' */
-  boolean_T objisempty_f;              /* '<Root>/Analog Input1' */
-  boolean_T objisempty_j;              /* '<Root>/Analog Input' */
+  boolean_T objisempty_b;              /* '<Root>/Analog Input2' */
 } DW_OnboardBlinkTest_T;
 
 /* Parameters (default storage) */
 struct P_OnboardBlinkTest_T_ {
-  real_T AnalogInput_SampleTime;       /* Expression: 1
-                                        * Referenced by: '<Root>/Analog Input'
-                                        */
-  real_T AnalogInput1_SampleTime;      /* Expression: 1
-                                        * Referenced by: '<Root>/Analog Input1'
+  uint16_T CompareToConstant_const;   /* Mask Parameter: CompareToConstant_const
+                                       * Referenced by: '<S1>/Constant'
+                                       */
+  real_T AnalogInput2_SampleTime;      /* Expression: -1
+                                        * Referenced by: '<Root>/Analog Input2'
                                         */
   real_T Constant1_Value;              /* Expression: 0
                                         * Referenced by: '<Root>/Constant1'
@@ -78,9 +122,6 @@ struct P_OnboardBlinkTest_T_ {
   real_T Constant2_Value;              /* Expression: 0
                                         * Referenced by: '<Root>/Constant2'
                                         */
-  real_T Constant3_Value;              /* Expression: 0
-                                        * Referenced by: '<Root>/Constant3'
-                                        */
   uint8_T ManualSwitch_CurrentSetting;
                               /* Computed Parameter: ManualSwitch_CurrentSetting
                                * Referenced by: '<Root>/Manual Switch'
@@ -90,10 +131,47 @@ struct P_OnboardBlinkTest_T_ {
 /* Real-time Model Data Structure */
 struct tag_RTM_OnboardBlinkTest_T {
   const char_T *errorStatus;
+  RTWExtModeInfo *extModeInfo;
+
+  /*
+   * Sizes:
+   * The following substructure contains sizes information
+   * for many of the model attributes such as inputs, outputs,
+   * dwork, sample times, etc.
+   */
+  struct {
+    uint32_T checksums[4];
+  } Sizes;
+
+  /*
+   * SpecialInfo:
+   * The following substructure contains special information
+   * related to other components that are dependent on RTW.
+   */
+  struct {
+    const void *mappingInfo;
+  } SpecialInfo;
+
+  /*
+   * Timing:
+   * The following substructure contains information regarding
+   * the timing information for the model.
+   */
+  struct {
+    time_T taskTime0;
+    uint32_T clockTick0;
+    uint32_T clockTickH0;
+    time_T stepSize0;
+    time_T tFinal;
+    boolean_T stopRequestedFlag;
+  } Timing;
 };
 
 /* Block parameters (default storage) */
 extern P_OnboardBlinkTest_T OnboardBlinkTest_P;
+
+/* Block signals (default storage) */
+extern B_OnboardBlinkTest_T OnboardBlinkTest_B;
 
 /* Block states (default storage) */
 extern DW_OnboardBlinkTest_T OnboardBlinkTest_DW;
@@ -107,6 +185,12 @@ extern void OnboardBlinkTest_terminate(void);
 extern RT_MODEL_OnboardBlinkTest_T *const OnboardBlinkTest_M;
 extern volatile boolean_T stopRequested;
 extern volatile boolean_T runModel;
+
+/*-
+ * These blocks were eliminated from the model due to optimizations:
+ *
+ * Block '<Root>/Constant3' : Unused code path elimination
+ */
 
 /*-
  * The generated code includes comments that allow you to trace directly
@@ -123,5 +207,6 @@ extern volatile boolean_T runModel;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'OnboardBlinkTest'
+ * '<S1>'   : 'OnboardBlinkTest/Compare To Constant'
  */
 #endif                                 /* RTW_HEADER_OnboardBlinkTest_h_ */

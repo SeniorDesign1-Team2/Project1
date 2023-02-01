@@ -7,9 +7,9 @@
  *
  * Code generation for model "OnboardBlinkTest".
  *
- * Model version              : 1.3
+ * Model version              : 1.5
  * Simulink Coder version : 9.6 (R2021b) 14-May-2021
- * C source code generated on : Tue Jan 31 18:34:02 2023
+ * C source code generated on : Wed Feb  1 18:27:15 2023
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

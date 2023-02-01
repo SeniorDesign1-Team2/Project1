@@ -41,6 +41,7 @@
 #define MW_CONNECTIONINFO_WIFI_VERBOSE 0
 #define MW_EXTMODE_CONFIGURATION XCP on Serial
 #define MW_EXTMODE_COMPORTBAUD 921600
+#define MW_EXTMODE_RUNNING on
 #define MW_RTOS Baremetal
 #define MW_SCHEDULER_INTERRUPT_SOURCE 0
 #define MW_RUNTIME_BUILDACTION 1
@@ -135,6 +136,7 @@
 #define MW_DASHBOARDCODEGENINFO_PUSHBUTTON_BLOCKCLASS codertarget.targetHiddenBlkInsert.internal.pushButton
 #define MW_DASHBOARDCODEGENINFO_PUSHBUTTON_REGFCN codertarget.arduinobase.blocks.registerDashboardBlk
 #define MW_DASHBOARDCODEGENINFO_PUSHBUTTON_VALIDATEFCN codertarget.targetHiddenBlkInsert.internal.isDashboardBlockCodegenEnabled
+#define MW_IOBLOCKSMODE deployed
 
 #endif /* __MW_TARGET_HARDWARE_RESOURCES_H__ */
 
